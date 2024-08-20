@@ -12,6 +12,16 @@ def cosine_similarity(vector_a: np.array, vector_b: np.array) -> float:
     norm_b = np.linalg.norm(vector_b)
     return dot_product / (norm_a * norm_b)
 
+def jaccard_binary(vector_a: np.array, vector_b: np.array):
+    """A function for finding the similarity between two binary vectors"""
+    intersection = len(list(set(vector_a).intersection(vector_b)))
+    union = (len(vector_a) + len(vector_b)) - intersection
+    return float(intersection) / union
+
+def euclidean_distance(vector_a: np.array, vector_b: np.array) -> float:
+    """Computes the euclidean distance between two vectors."""
+    return np.linalg.norm(vector_a - vector_b)
+
 
 class VectorDatabase:
     def __init__(self, embedding_model: EmbeddingModel = None):
