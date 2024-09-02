@@ -1,0 +1,4 @@
+1. Introduction to Linear Regression
+2. Key Concepts and Formulas
+3. Practical Applications of Linear Regression
+4. Conclusion and Key Takeaways
